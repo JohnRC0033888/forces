@@ -32,7 +32,7 @@ namespace forces
         }
         double cos(double x)
         {
-            return (Math.XCos(x * Math.PI / 180.0));
+            return (Math.Cos(x * Math.PI / 180.0));
         }
 
         double acos(double X)
@@ -40,5 +40,26 @@ namespace forces
             return (Math.Acos(X) * 180 / Math.PI);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double F = double.Parse(textBox1.Text);
+            double angle = double.Parse(textBox2.Text);
+
+            double Fx = F * cos(angle);
+            double Fy = F * sin(angle);
+
+            MessageBox.Show("Fx = " + Fx.ToString("N3") + " N");
+            MessageBox.Show("Fy = " + Fx.ToString("N3") + " N");
+
+
+
+
+
+
+
+
+
+
+        }
     }
 }
